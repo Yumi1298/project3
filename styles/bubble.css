@@ -1,0 +1,63 @@
+ #background-wrap {
+  position: fixed;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.bubble {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  background: linear-gradient(
+    220deg,
+    #c0c0c0 23.37%,
+    #919191 43.45%,
+    #3c3c3c 73.81%
+  );
+  filter: blur(11px);
+}
+
+@keyframes animateBubble {
+  0% {
+    margin-top: 1000px;
+  }
+  100% {
+    margin-top: -1000px;
+  }
+}
+
+@keyframes animateBubbleBottom {
+  0% {
+    margin-top: -1000px;
+  }
+  100% {
+    margin-top: 1000px;
+  }
+}
+
+@keyframes sideWays {
+  0% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 50px;
+  }
+}
+.x1 {
+  animation: animateBubble 25s linear infinite;
+  left: 10%;
+  top: 5%;
+  transform: scale(1);
+}
+.x2 {
+  animation: animateBubbleBottom 25s linear infinite;
+  left: 5%;
+  top: 5%;
+  transform: scale(1);
+}
+

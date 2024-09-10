@@ -1,0 +1,351 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+body nav.navbar {
+  width: 100%;
+  background-color: white;
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+body nav.navbar div.container-fluid strong {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+body nav.navbar div.container-fluid strong::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 0.25rem;
+  width: 0.25rem;
+  height: 0.25rem;
+  background-color: red;
+}
+body nav.navbar div.container-fluid a {
+  color: black;
+  transition: all 0.3s ease;
+}
+body nav.navbar div.container-fluid a:hover {
+  color: #febe98;
+}
+body main section.main-area {
+  min-height: 95vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.main-area div.info {
+  flex-basis: 600px;
+  padding: 1rem;
+}
+body main section.main-area div.info h1 {
+  font-size: 3.5rem;
+}
+body main section.main-area div.info h1 strong {
+  position: relative;
+}
+body main section.main-area div.info h1 strong::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  bottom: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: red;
+}
+body main section.main-area div.info h3 {
+  font-size: 1.25rem;
+}
+body main section.main-area div.info a {
+  color: white;
+  background-color: black;
+  padding: 0.75rem 1.25rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+  border: 2px solid transparent;
+  display: inline-block;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+}
+body main section.main-area div.info a:hover {
+  transform: scale(1.05);
+}
+body main section.main-area div.info a i {
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+body main section.main-area div.img-area {
+  flex-basis: 450px;
+  padding: 2rem;
+}
+body main section.main-area div.img-area img {
+  width: 100%;
+}
+body main section.about {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3.5rem;
+}
+body main section.about section.description {
+  width: 100%;
+  flex: 5 1 500px;
+  padding: 3.5rem;
+}
+body main section.about section.description h2 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+body main section.about section.description h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 0.4rem;
+  margin-bottom: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: red;
+}
+body main section.about section.description h3 {
+  font-size: 1.5rem;
+}
+body main section.about section.description h4 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+}
+body main section.about section.description div.school-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+body main section.about section.description div.school-info div.school {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  /* glasses */
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.55), 0px 0px 30px 0px rgba(255, 255, 255, 0.55) inset;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  color: #fff;
+  padding: 1rem 2rem;
+  padding-block: 1rem;
+  transition: all 0.3s ease;
+}
+body main section.about section.description div.school-info div.school p {
+  margin: 0px;
+}
+body main section.about section.description div.school-info div.school:hover {
+  transform: scale(1.1);
+}
+body main section.about section.description div.tech-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+body main section.about section.description div.tech-info div.tech {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  /* glasses */
+  box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.55), 0px 0px 30px 0px rgba(255, 255, 255, 0.55) inset;
+  -webkit-backdrop-filter: blur(25px);
+          backdrop-filter: blur(25px);
+  color: #fff;
+  transition: all 0.3s ease;
+  padding: 1rem 2rem;
+  width: 25%;
+}
+body main section.about section.description div.tech-info div.tech p {
+  margin: 0px;
+}
+body main section.about section.description div.tech-info div.tech:hover {
+  transform: scale(1.1);
+}
+body main section.about section.my-photo {
+  flex: 1 1 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+body main section.about section.my-photo img {
+  width: 75%;
+  z-index: 1;
+}
+body main section.about section.my-photo div.react {
+  width: 25vw;
+  height: 65vh;
+  border: 15px solid white;
+  position: absolute;
+  top: 170px;
+  left: 120px;
+  z-index: 0;
+}
+body main section.working {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3.5rem 7rem;
+  gap: 1rem;
+}
+body main section.working section.paragraph {
+  flex: 1 1 500px;
+  padding-right: 3rem;
+}
+body main section.working section.work {
+  flex: 1 1 500px;
+}
+body main section.portfolio {
+  background-color: black;
+  color: white;
+  padding: 3.5rem 7rem;
+}
+body main section.portfolio h2 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+body main section.portfolio h2::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 0.4rem;
+  margin-bottom: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: red;
+}
+body main section.portfolio h4 {
+  margin: 1rem 0;
+}
+body main section.portfolio a {
+  text-decoration: none;
+}
+body main section.portfolio a div.card {
+  padding: 1.5rem 1.5rem 0rem 1.25rem;
+  border-radius: 0px;
+  border: 1px solid rgb(81, 81, 81);
+  transition: all 0.3s ease;
+}
+body main section.portfolio a div.card:hover {
+  transform: scale(1.05);
+}
+body main section.portfolio a div.card img {
+  width: 100%;
+  border: 1px solid rgb(176, 176, 176);
+  border-radius: 0px;
+}
+body main section.portfolio a div.card div.card-body {
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body main section.portfolio a div.card div.card-body h5 {
+  margin-bottom: 0;
+}
+body footer {
+  background-color: white;
+  color: black;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+body footer h3 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+body footer h3::after {
+  content: "";
+  position: relative;
+  display: block;
+  margin-left: 0.4rem;
+  margin-bottom: 0.3rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: red;
+}
+body footer section.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+body footer section.contact hr {
+  width: 90%;
+}
+body footer section.contact p {
+  margin: 0;
+}
+
+@media screen and (max-width: 1464px) {
+  body main section.about {
+    padding: 2rem;
+  }
+  body main section.about section.description {
+    padding: 1rem;
+  }
+  body main section.about section.description div.school-info {
+    gap: 1.5rem;
+  }
+  body main section.about section.description div.school-info div.school {
+    padding: 0.5rem 1rem;
+  }
+  body main section.about section.description div.tech-info {
+    gap: 1.5rem;
+  }
+  body main section.about section.description div.tech-info div.tech {
+    width: 47%;
+  }
+  body main section.working {
+    padding: 1.75rem 3.5rem;
+  }
+  body main section.working section.paragraph {
+    padding: 1rem;
+  }
+  body main section.working section.work {
+    padding: 1rem;
+  }
+}
+@media screen and (max-width: 1064px) {
+  body main section.about section.my-photo img {
+    width: 50%;
+  }
+  body main section.about section.my-photo div.react {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  body main section.about section.description {
+    width: 80%;
+  }
+  body main section.about section.description div.tech-info div.tech {
+    width: 47%;
+  }
+  body main section.working {
+    padding: 1rem 2rem;
+  }
+}
+@media screen and (max-width: 496px) {
+  body main section.about section.description div.tech-info div.tech {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
