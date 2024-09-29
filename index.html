@@ -17,8 +17,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" href="/favicon.svg" type="image/x-icon">
-
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/bubble.css">
   </head>
@@ -61,7 +61,7 @@
     <main>
       <div id="background-wrap">
         <div class="bubble x1"></div>
-        <div class="bubble x2"></div>
+        <!-- <div class="bubble x2"></div> -->
     </div>
 
       <section class="main-area">
@@ -78,8 +78,9 @@
           <img src="./pictures/灰背景照片2.png" alt="個人照片" />
         </div>
       </section>
+
       <section class="about" id="about">
-        <section class="description">
+        <section class="description"  data-aos="zoom-right" >
           <h2>關於我</h2>
           <p>
             我是陳昱穎，具有護理工作經驗，現在正積極轉職為前端工程師。
@@ -125,13 +126,13 @@
             <div class="tech">前後端串接</div>
           </div>
         </section>
-        <section class="my-photo">
+        <section class="my-photo" data-aos="zoom-right">
           <img src="./pictures/個人照2.png" alt="個人照片" />
-
         </section>
       </section>
+      
       <section class="working">
-        <section class="paragraph">
+        <section class="paragraph" data-aos="zoom-right">
           <h3>轉職歷程</h3>
           <p>
             在就學時期學習過繪圖軟體，也有修過介面設計課程，並在工讀時擔任過美編職位，自學基礎網頁設計後覺得很有興趣，也認為軟體工程領域的未來發展性較高，而且必須不斷地學習，充滿挑戰性。
@@ -144,7 +145,7 @@
             我認爲自己透過專案實作學習吸收速度非常快，能快速理解，在團隊合作與溝通上也非常有經驗，現階段目標為轉職成前端工程師，未來想朝全端工程師邁進。
           </p>
         </section>
-        <section class="work">
+        <section class="work" data-aos="zoom-right">
           <h3>工作經歷</h3>
           <ul>
             <li>
@@ -174,9 +175,11 @@
           </ul>
         </section>
       </section>
-      <section class="portfolio" id="portfolio">
-        <section class="static">
+      <section class="portfolio" id="portfolio" >
+        <section class="portfolio-content" data-aos="zoom-right">
         <h2>作品集</h2>
+        <section class="static" data-aos="zoom-right">
+
         <h4>靜態網站作品RWD</h4>
         <div class="row g-4">
           <div class="col-12 col-lg-4 col-md-12">
@@ -229,7 +232,8 @@
         </div>
 
       </section>
-      <section class="js">
+      
+      <section class="js" data-aos="zoom-right">
         <h4>Javascript互動專案</h4>
         <div class="row g-4">
           <div class="col-12 col-lg-4 col-md-12">
@@ -281,7 +285,7 @@
         </div>
       </section>
 
-      <section class="react"></section>
+      <section class="react" data-aos="zoom-right">
         <h4>React專題簡報(資展培訓小組專案)</h4>
         <div class="row g-4">
           <div class="col-12 col-lg-4 col-md-12 ">
@@ -303,7 +307,46 @@
           </div>
         </div>
       </section>
+
+      <section class="figma" data-aos="zoom-right">
+        <h4>figma基礎排版</h4>
+        <div class="row g-4">
+          <div class="col-12 col-lg-4 col-md-12 ">
+            <a target="_blank" href="#">
+              <div class="card portfolio-card">
+                <img
+                  src="./images/home01.png"
+                  class="card-img-top w-100"
+                  alt="React專題簡報(資展培訓小組專案)"
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><strong>react專案首頁排版</strong></h5>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-12 col-lg-4 col-md-12 ">
+            <a target="_blank" href="#">
+              <div class="card portfolio-card">
+                <img
+                  src="./images/home01.png"
+                  class="card-img-top w-100"
+                  alt="React專題簡報(資展培訓小組專案)"
+                />
+                <div class="card-body">
+                  <h5 class="card-title"><strong>react專案首頁排版</strong></h5>
+
+                </div>
+              </div>
+            </a>
+          </div>
+          </div>
+     
       </section>
+    </section>
+      </section>
+    
     </main>
 
     <footer >
@@ -327,6 +370,14 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./app.js"></script>
+    <script>
+      AOS.init({
+        duration: 600,  // 設定動畫時間
+        easing: 'ease-in-out', // 使用平滑的過渡曲線
+        once: true       // 確保動畫只執行一次;
+      })
+    </script>
   </body>
 </html>
