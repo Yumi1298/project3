@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -273,6 +274,13 @@ body main section.portfolio a div.card div.card-body {
 }
 body main section.portfolio a div.card div.card-body h5 {
   margin-bottom: 0;
+}
+body main section.portfolio a div.card h5.card-title strong {
+  display: -webkit-box; /* 為了支援多行 */
+  -webkit-box-orient: vertical; /* 垂直排列 */
+  -webkit-line-clamp: 1; /* 設定顯示的行數 */
+  overflow: hidden; /* 隱藏超出的內容 */
+  text-overflow: ellipsis; /* 使用省略號 */
 }
 body footer {
   background-color: white;
