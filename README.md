@@ -7,7 +7,7 @@
 
 ## 專業技能
 
-- Web 開發 :JavaScript / jQuery / Node.js(express) / AJAX / Axios
+- Web 開發 :JavaScript / jQuery / Node.js(express,ejs) / AJAX / Axios
 - Web 框架 :React.js (Next.js, Hooks, JSX, scss ,CSS module, functional component)
 - 前端切版 :HTML5 / CSS3 / RWD / Bootstrap
 - 前端美編 :Photoshop (PS) / Figma
@@ -18,14 +18,11 @@
 - **HTML5、CSS3**：熟悉應用 HTML 標籤，能獨立切版，不依賴 Bootstrap 切出符合客戶需求的頁面。
 - **響應式網頁設計 (RWD)**：可手刻切版，也熟悉 Bootstrap，適用於手機、平板和桌電的頁面。
 - **JavaScript**：熟悉 ES6 語法。
-- **jQuery**：熟悉並能整合使用第三方套件。
-- **Photoshop 和 Figma**：具備簡易畫圖、修圖和排版等設計能力。
 - **AJAX**：能進行動態頁面渲染，進行非同步請求。
 - **後端基礎**：理解 PHP 和 Node 的運作，能取用與驗證資料，會基礎的 MySQL CRUD、JOIN 等語法，了解資料庫正規化。
 - **MongoDB 和 Mongosh**：理解 NoSQL 資料庫的概念，掌握基本的 CRUD 操作。使用 Mongosh 進行資料庫的操作，進行資料查詢、文件更新及刪除等基本資料庫操作
 - **RESTful API**：理解並有串接 Google 登入 API 及 Pexels API 經驗。
 - **API 的安全性管理**：使用 JWT 或 OAuth2 的方式進行 API 保護。能在 MongoDB 和 MySQL 中配置使用者權限，確保資料的完整性與安全性。
-- **React 和 Node.js**：能有效地構建頁面，使用 ejs 模板引擎。
 - **Github**：熟悉使用版本控制系統。
 
 ## 自我介紹
