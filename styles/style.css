@@ -151,7 +151,7 @@ body main section.about section.description h3 {
 }
 body main section.about section.description h4 {
   font-size: 1.25rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 body main section.about section.description div.school-info {
   display: flex;
@@ -160,7 +160,7 @@ body main section.about section.description div.school-info {
 }
 body main section.about section.description div.school-info div.school {
   text-align: center;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(138, 138, 138, 0.858);
   /* glasses */
   box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.55), 0px 0px 30px 0px rgba(255, 255, 255, 0.55) inset;
   -webkit-backdrop-filter: blur(25px);
@@ -174,7 +174,7 @@ body main section.about section.description div.school-info div.school p {
   margin: 0px;
 }
 body main section.about section.description div.school-info div.school:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 body main section.about section.description div.tech-info {
   display: flex;
@@ -183,7 +183,7 @@ body main section.about section.description div.tech-info {
 }
 body main section.about section.description div.tech-info div.tech {
   text-align: center;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(138, 138, 138, 0.858);
   /* glasses */
   box-shadow: 0px 30px 40px 0px rgba(0, 0, 0, 0.55), 0px 0px 30px 0px rgba(255, 255, 255, 0.55) inset;
   -webkit-backdrop-filter: blur(25px);
@@ -197,7 +197,7 @@ body main section.about section.description div.tech-info div.tech p {
   margin: 0px;
 }
 body main section.about section.description div.tech-info div.tech:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 body main section.about section.my-photo {
   flex: 1 1 500px;
