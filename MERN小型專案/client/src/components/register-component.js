@@ -24,6 +24,7 @@ const RegisterComponent = () => {
 
   const handleChangeRole = (e) => {
     setRole(e.target.value);
+    console.log(e.target.value);
   };
 
   const handleRegister = () => {
@@ -77,26 +78,27 @@ const RegisterComponent = () => {
           <label htmlFor="password">身份：</label>
           <div class="form-check">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="radio"
               name="role"
+              id="student"
               value="student"
               onChange={handleChangeRole}
-              checked
             />
-            <label class="form-check-label" for="role">
+            <label class="form-check-label" for="student">
               student
             </label>
           </div>
           <div class="form-check">
             <input
-              class="form-check-input"
+              className="form-check-input"
               type="radio"
               name="role"
+              id="instructor"
               value="instructor"
               onChange={handleChangeRole}
             />
-            <label class="form-check-label" for="role">
+            <label class="form-check-label" for="instructor">
               instructor
             </label>
           </div>
