@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影片播放清單</title>
+  <style>
+    body{
+      background-color: rgb(207, 206, 196);
+    }
+
+    .myVideo{
+      display: flex;
+      justify-content: center;
+      margin: 5rem;
+    }
+    .container{
+      display: flex;
+      flex-flow: column;
+      background-color: #E9EAEC;
+      border-radius:1rem 0 0 1rem; 
+      #player{
+        border-radius:1rem 0 0 0; 
+      }
+    }
+    
+    .icons{
+      padding: 10px;  
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+    }
+    .icon{ 
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      margin: 5px;
+
+    }
+
+    .aside{
+
+      background-color: #90ADC6;
+      border-radius: 0 1rem  1rem 0; 
+
+    }
+    #list{
+      margin: 10px;
+      display: flex;
+      flex-flow: column;
+      width: 300px;
+      label{
+        margin: 5px;
+        width: 25px;
+        height: 25px;
+        svg{
+          margin: 0px;
+        }
+      }
+    }
+    .videoBtn{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid black;
+      cursor: move;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="myVideo">
+  <div class="container">
+    <video id="player" width="700px"></video>
+    <input type="range" class="video-range" id="video-range">
+      <div class="icons"> 
+        <div id="previous"><svg class="icon"><use href="#icon1"></svg></div>
+        <div id="play"><svg class="icon"><use href="#icon2"></svg></div>
+        <div id="pause"><svg class="icon"><use href="#icon3"></svg></div>
+          <div id="next"><svg class="icon"><use href="#icon4"></svg></div>
+            <div id="volume"><svg class="icon"><use href="#icon5"></svg></div>
+        <input type="range" class="volume-range" id="volume-range">
+    </div>
+  </div>
+
+<div class="aside">
+  <div id="list">
+    
+    <label for="addVideo"><svg class="icon"><use href="#plus"></svg></label>
+    <input type="file" id="addVideo" style="display: none;">
+    </div>
+  
+
+  <svg style="display: none;">
+    <defs>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="icon1"><path d="M267.5 440.6c9.5 7.9 22.8 9.7 34.1 4.4s18.4-16.6 18.4-29V96c0-12.4-7.2-23.7-18.4-29s-24.5-3.6-34.1 4.4l-192 160L64 241V96c0-17.7-14.3-32-32-32S0 78.3 0 96V416c0 17.7 14.3 32 32 32s32-14.3 32-32V271l11.5 9.6 192 160z"/></symbol>
+  
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" id="icon2"><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></symbol>
+  
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="icon3"><path d="M48 64C21.5 64 0 85.5 0 112V400c0 26.5 21.5 48 48 48H80c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H48zm192 0c-26.5 0-48 21.5-48 48V400c0 26.5 21.5 48 48 48h32c26.5 0 48-21.5 48-48V112c0-26.5-21.5-48-48-48H240z"/></symbol>
+  
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="icon4"><path d="M52.5 440.6c-9.5 7.9-22.8 9.7-34.1 4.4S0 428.4 0 416V96C0 83.6 7.2 72.3 18.4 67s24.5-3.6 34.1 4.4l192 160L256 241V96c0-17.7 14.3-32 32-32s32 14.3 32 32V416c0 17.7-14.3 32-32 32s-32-14.3-32-32V271l-11.5 9.6-192 160z"/></symbol>
+  
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" id="icon5"><path d="M533.6 32.5C598.5 85.2 640 165.8 640 256s-41.5 170.7-106.4 223.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C557.5 398.2 592 331.2 592 256s-34.5-142.2-88.7-186.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM473.1 107c43.2 35.2 70.9 88.9 70.9 149s-27.7 113.8-70.9 149c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C475.3 341.3 496 301.1 496 256s-20.7-85.3-53.2-111.8c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zm-60.5 74.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5zM301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3z"/></symbol>  
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="plus"><path d="M64 80c-8.8 0-16 7.2-16 16V416c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V96c0-8.8-7.2-16-16-16H64zM0 96C0 60.7 28.7 32 64 32H384c35.3 0 64 28.7 64 64V416c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V96zM200 344V280H136c-13.3 0-24-10.7-24-24s10.7-24 24-24h64V168c0-13.3 10.7-24 24-24s24 10.7 24 24v64h64c13.3 0 24 10.7 24 24s-10.7 24-24 24H248v64c0 13.3-10.7 24-24 24s-24-10.7-24-24z"/></symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="delete"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm79 143c9.4-9.4 24.6-9.4 33.9 0l47 47 47-47c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9l-47 47 47 47c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-47-47-47 47c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l47-47-47-47c-9.4-9.4-9.4-24.6 0-33.9z"/></symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" id="icon6"><path d="M320 64c0-12.6-7.4-24-18.9-29.2s-25-3.1-34.4 5.3L131.8 160H64c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h67.8L266.7 471.9c9.4 8.4 22.9 10.4 34.4 5.3S320 460.6 320 448V64z"/></symbol>
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" id="icon7"><path d="M301.1 34.8C312.6 40 320 51.4 320 64V448c0 12.6-7.4 24-18.9 29.2s-25 3.1-34.4-5.3L131.8 352H64c-35.3 0-64-28.7-64-64V224c0-35.3 28.7-64 64-64h67.8L266.7 40.1c9.4-8.4 22.9-10.4 34.4-5.3zM412.6 181.5C434.1 199.1 448 225.9 448 256s-13.9 56.9-35.4 74.5c-10.3 8.4-25.4 6.8-33.8-3.5s-6.8-25.4 3.5-33.8C393.1 284.4 400 271 400 256s-6.9-28.4-17.7-37.3c-10.3-8.4-11.8-23.5-3.5-33.8s23.5-11.8 33.8-3.5z"/></symbol>
+  </defs>
+  </svg>
+</div>
+</div>
+  <script>
+    const addVideo = document.querySelector("#addVideo");
+const label = document.querySelector("label[for=addVideo]");
+const iconsDiv = document.querySelector(".icons");
+const icons = {
+  previous: document.querySelector("#previous"),
+  play: document.querySelector("#play"),
+  next: document.querySelector("#next"),
+  volume: document.querySelector("#volume"),
+  pause: document.querySelector("#pause"),
+};
+const player = document.querySelector("#player");
+const volumeRange = document.querySelector("#volume-range");
+const videoRange = document.querySelector("#video-range");
+const list = document.querySelector("#list");
+let draggedItem = null;
+let currentIndex = 0; 
+let videoBtnsArray = [];
+
+// 上傳檔案
+addVideo.addEventListener("change", (event) => {
+  let file = event.target.files[0];
+  if (file === undefined) {
+    return false;
+  }
+
+  const newBtn = document.createElement("div");
+  newBtn.innerHTML = `${file.name}<div class="deleteDiv"><svg class="icon"><use href="#delete" ></svg></div>`;
+  newBtn.classList.add("videoBtn");
+  newBtn.setAttribute("draggable", "true");
+  list.insertBefore(newBtn, label);
+
+  const deleteDiv = newBtn.querySelector(".deleteDiv");
+
+  let reader = new FileReader();
+  reader.addEventListener("load", (e) => {
+    player.src = e.target.result;
+  });
+  reader.readAsDataURL(file);
+
+  newBtn.addEventListener("click", () => {
+    currentIndex = videoBtnsArray.indexOf(newBtn);
+    player.src = reader.result;
+    player.play();
+  });
+
+  //delete
+  deleteDiv.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const index = videoBtnsArray.indexOf(newBtn);
+    videoBtnsArray.splice(index, 1);
+    newBtn.remove();
+    if (currentIndex === index) {
+      player.src = '';
+    } else if (currentIndex > index) {
+      currentIndex -= 1;
+    }
+  });
+
+  // 拖曳
+  newBtn.addEventListener("dragstart", (e) => {
+    draggedItem = e.target;
+    e.target.classList.add("dragging");
+  });
+  newBtn.addEventListener("dragend", (e) => {
+    e.target.classList.remove("dragging");
+    updateVideoBtnsArray();
+  });
+  newBtn.addEventListener("dragover", (e) => {
+    e.preventDefault();
+  });
+  newBtn.addEventListener("drop", (e) => {
+    e.preventDefault();
+    const _this = e.target.closest(".videoBtn");
+    if (_this !== draggedItem) {
+      let list = draggedItem.parentNode;
+      let draggingIndex = [...list.children].indexOf(draggedItem);
+      let dropIndex = [...list.children].indexOf(_this);
+      if (draggingIndex > dropIndex) {
+        list.insertBefore(draggedItem, _this);
+      } else {
+        list.insertBefore(draggedItem, _this.nextSibling);
+      }
+    }
+  });
+
+  videoBtnsArray.push(newBtn);
+});
+
+// 更新 videoBtnsArray 的順序
+function updateVideoBtnsArray() {
+  videoBtnsArray = [...list.querySelectorAll(".videoBtn")];
+}
+
+// 按鈕控制
+iconsDiv.addEventListener("click", (e) => {
+  const clickedIcon = e.target.closest("div");
+  if (clickedIcon === icons.previous) {
+    playPreviousVideo();
+  } else if (clickedIcon === icons.play) {
+    player.play();
+  } else if (clickedIcon === icons.pause) {
+    player.pause();
+  } else if (clickedIcon === icons.next) {
+    playNextVideo();
+  }
+});
+
+function playPreviousVideo() {
+  if (currentIndex > 0) {
+    currentIndex -= 1;
+    videoBtnsArray[currentIndex].click();
+  }
+}
+
+function playNextVideo() {
+  if (currentIndex < videoBtnsArray.length - 1) {
+    currentIndex += 1;
+    videoBtnsArray[currentIndex].click();
+  }
+}
+
+// 聲音調整
+icons.volume.addEventListener("click", () => {
+  player.muted = !player.muted;
+  updateVolumeIcon();
+});
+
+
+volumeRange.addEventListener("input", () => {
+  const volume = volumeRange.value / 100;
+  player.volume = volume;
+  updateVolumeIcon();
+});
+
+function updateVolumeIcon() {
+  if (player.muted || player.volume === 0) {
+    icons.volume.innerHTML = '<svg class="icon"><use href="#icon6"></svg>';
+  } else if (player.volume <= 0.5) {
+    icons.volume.innerHTML = '<svg class="icon"><use href="#icon7"></svg>';
+  } else {
+    icons.volume.innerHTML = '<svg class="icon"><use href="#icon5"></svg>';
+  }
+}
+
+
+videoRange.addEventListener("input", () => {
+  const progress = videoRange.value / 100;
+  const newTime = progress * player.duration;
+  player.currentTime = newTime; 
+});
+
+
+function updateProgress() {
+  const progress = (player.currentTime / player.duration) * 100; 
+  videoRange.value = progress;
+}
+
+
+setInterval(updateProgress, 1000);
+
+  </script>
+</body>
+</html>
