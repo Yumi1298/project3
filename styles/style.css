@@ -246,54 +246,58 @@ body main section.portfolio h2::after {
   height: 0.3rem;
   background-color: rgb(194, 0, 0);
 }
-body main section.portfolio h4 {
+body main section.portfolio section.portfolio-content section {
+  margin-bottom: 2rem;
+}
+body main section.portfolio section.portfolio-content h4 {
   margin: 1rem 0;
 }
-body main section.portfolio a {
+body main section.portfolio section.portfolio-content a {
   text-decoration: none;
 }
-body main section.portfolio a div.card {
+body main section.portfolio section.portfolio-content a div.card {
   padding: 1.5rem 1.5rem 1.25rem 1.25rem;
   border-radius: 0px;
   border: 1px solid rgb(81, 81, 81);
   transition: all 0.3s ease;
 }
-body main section.portfolio a div.card:hover {
+body main section.portfolio section.portfolio-content a div.card:hover {
   transform: scale(1.05);
 }
-body main section.portfolio a div.card img {
+body main section.portfolio section.portfolio-content a img {
   width: 100%;
   border: 1px solid rgb(176, 176, 176);
   border-radius: 0px;
 }
-body main section.portfolio a div.card div.card-body {
+body main section.portfolio section.portfolio-content a div.card-body {
   padding: 1 5rem 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
-body main section.portfolio a div.card div.card-body h5 {
+body main section.portfolio section.portfolio-content a div.card-body h5 {
   margin-bottom: 0;
 }
-body main section.portfolio a div.card h5.card-title strong {
+body main section.portfolio section.portfolio-content a h5.card-title strong {
   display: -webkit-box; /* 為了支援多行 */
   -webkit-box-orient: vertical; /* 垂直排列 */
   -webkit-line-clamp: 1; /* 設定顯示的行數 */
   overflow: hidden; /* 隱藏超出的內容 */
   text-overflow: ellipsis; /* 使用省略號 */
 }
-body footer {
+
+footer {
   background-color: white;
   color: black;
   padding: 1.5rem 0;
   width: 100%;
 }
-body footer h3 {
+footer h3 {
   position: relative;
   display: flex;
   align-items: flex-end;
 }
-body footer h3::after {
+footer h3::after {
   content: "";
   position: relative;
   display: block;
@@ -303,17 +307,17 @@ body footer h3::after {
   height: 0.3rem;
   background-color: rgb(194, 0, 0);
 }
-body footer section.contact {
+footer section.contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-body footer section.contact hr {
+footer section.contact hr {
   width: 90%;
 }
-body footer section.contact p {
+footer section.contact p {
   margin: 0;
 }
 
