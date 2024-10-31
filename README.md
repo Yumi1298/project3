@@ -9,11 +9,10 @@
 
 - Web 開發 :JavaScript / jQuery / Node.js(express) / AJAX / Axios
 - Web 框架 :React.js (Next.js, Hooks, JSX, scss ,CSS module, functional component)
-- 前端切版 :HTML5 / CSS / RWD / Bootstrap
+- 前端切版 :HTML5 / CSS3 / RWD / Bootstrap
 - 前端美編 :Photoshop (PS) / Figma
 - 後端相關: PHP / MySQL / Node / MongoDB / Mongosh
-- 版本管理: Git
-
+- 版本管理: Github
 ## 技能詳述
 
 - **HTML5、CSS3**：熟悉應用 HTML 標籤，能獨立切版，不依賴 Bootstrap 切出符合客戶需求的頁面。
@@ -27,7 +26,7 @@
 - **RESTful API**：理解並有串接 Google 登入 API 及 Pexels API 經驗。
 - **API 的安全性管理**：使用 JWT 或 OAuth2 的方式進行 API 保護。能在 MongoDB 和 MySQL 中配置使用者權限，確保資料的完整性與安全性。
 - **React 和 Node.js**：能有效地構建頁面，使用 ejs 模板引擎。
-- **Git**：熟悉使用版本控制系統。
+- **Github**：熟悉使用版本控制系統。
 
 ## 自我介紹
 
