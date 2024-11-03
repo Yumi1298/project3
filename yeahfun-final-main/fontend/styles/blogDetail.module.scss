@@ -1,0 +1,117 @@
+.span1 {
+  padding-inline: 20px;
+  background: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-block: 5px;
+  margin-block: 5px;
+  
+ 
+}
+.span2 {
+  padding-inline: 20px;
+  background: var(--primary-1);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px;
+  padding-block: 5px;
+  margin-block: 5px;
+}
+.span3 {
+  padding-inline: 20px;
+  background: var(--secondary-2);
+  cursor: pointer;
+  display: none;
+  border-radius: 20px;
+  padding-block: 5px;
+  margin-block: 5px;
+}
+.span3X {
+  padding-inline: 20px;
+  background: var(--white);
+  cursor: pointer;
+  display: none;
+  border-radius: 20px;
+  padding-block: 5px;
+  margin-block: 5px;
+}
+.span3X:hover {
+  padding-inline: 20px;
+  background: var(--secondary-3);
+  cursor: pointer;
+  display: none;
+  border-radius: 20px;
+  padding-block: 5px;
+  margin-block: 5px;
+}
+
+.likeContainer {
+  background-color: var(--primary-1);
+  border-radius: 10px;
+}
+.likeContainer:hover .span3X {
+  display: block;
+}
+
+.cc {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.color1 {
+  color: var(--gray-600);
+}
+
+.card1 {
+  cursor: pointer;
+}
+.card1:hover {
+  color: var(--secondary-3);
+}
+
+.meAuto {
+  margin-left: 45%;
+  @media (max-width: 1200px) {
+    margin-left: 15%;
+  }
+  
+  @media (max-width: 576px) {
+    margin-left: 10%;
+  }
+ 
+}
+
+.contentWrapper > * {
+  margin-bottom: 1rem;
+}
+
+.contentWrapper strong {
+  font-weight: bold;
+}
+
+.contentWrapper em {
+  font-style: italic;
+}
+
+.contentWrapper img {
+  max-width: 500px;
+  max-height: 350px;
+  display: block; /* 使图片独占一行 */
+  margin: 1rem 0;
+  @media (max-width: 476px) {
+    max-width: 430px;
+  }
+}
+
+.contentWrapper a {
+  color: var(--secondary-3);
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.paddingEnd {
+  min-height: 400px;
+  @media (max-width: 768px) {
+    min-height: 200px;
+  }
+}

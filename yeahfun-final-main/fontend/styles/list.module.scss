@@ -1,0 +1,281 @@
+.listContainer {
+  padding: 0px 100px;
+}
+
+.section02,
+.myCardList {
+  width: 100%;
+  display: flex;
+  padding: 60px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+}
+.sort {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  // background-color: rgba(253, 176, 23, 0.8);
+  background: linear-gradient(0deg, #fa8752 0%, #fdb524 100%);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.sort p,
+.sort label {
+  color: var(--white);
+  font-weight: 600;
+}
+// .orderBys {
+//   display: flex;
+//   height: 100%;
+//   justify-content: flex-end;
+//   flex-direction: column;
+// }
+
+/* .cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  align-self: stretch;
+} */
+.orderByNone {
+  display: none;
+}
+.card {
+  --bs-card-bg: transparent;
+  --bs-card-border-color: transparent;
+}
+.productCard {
+  position: relative;
+  transition: all 0.3s ease;
+}
+.productCard:hover .favor {
+  top: -30px; /* 更新 favor 在卡片上的位置 */
+  opacity: 1; /* 淡入效果 */
+}
+.favor {
+  z-index: 2;
+  opacity: 0; /* 初始狀態為隱藏 */
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cardImage {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.cardBody {
+  display: flex;
+  padding: 15px 15px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 7px;
+  align-self: stretch;
+}
+
+.cardBody a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.cardBody a:hover {
+  color: var(--secondary-3);
+}
+
+.cardTags {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.cardTagLocation {
+  color: var(--white);
+  border-radius: 10px;
+  background: var(--primary-1, #389b87);
+  display: flex;
+  justify-content: center;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 5px;
+}
+
+.cardTagStar {
+  height: 34px;
+  color: var(--white);
+  display: flex;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border-radius: 10px;
+  background: var(--primary-1, #389b87);
+}
+.cardTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.myCardList .card .cardTitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.decorateIndex {
+  width: 100%;
+  position: absolute;
+  top: 920px;
+}
+.pageBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+.searchBar {
+  display: flex;
+  position: sticky;
+  top: 0px; /* 根據需要調整 */
+  justify-content: center;
+  width: 100%;
+  background: linear-gradient(0deg, #fa8752 0%, #fdb524 100%);
+  // background: var(--secondary-3, #ffb998);
+  /* border-radius: 10px; */
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 5;
+}
+
+.searchBarSort {
+  display: none;
+  width: 100%;
+  gap: 20px;
+}
+.productSearchForm {
+  display: flex;
+
+  padding: 15px 0;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  color: var(--white);
+  width: 100%;
+}
+
+.calendarTeam,
+.goWhereTeam,
+.types,
+.keyword,
+.orderBys {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  white-space: nowrap;
+}
+.price {
+  width: 180px;
+}
+.price input {
+  width: 100%;
+}
+
+.types,
+.keyword {
+  width: 150px;
+  flex-shrink: 0;
+}
+
+.btnGreenPc {
+  padding: 10px 30px;
+  border: 1px solid var(--white);
+  background: var(--primary-1);
+  color: var(--white);
+
+  border: 1px solid var(--white);
+}
+
+.btnGreenPc:hover {
+  border: 1px solid var(--primary-1); /* 明確指定邊框寬度、樣式和顏色 */
+  background: var(--white);
+  color: var(--primary-1);
+}
+
+@media (max-width: 576px) {
+  .productSearchForm {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 70px 30px 40px 30px;
+  }
+  .orderByNone {
+    display: block;
+  }
+  .calendarTeam,
+  .goWhereTeam,
+  .keyword,
+  .types {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .listContainer {
+    width: 100%;
+    padding: 0px 15px;
+  }
+  .sort {
+    display: none;
+  }
+  .searchBar {
+    justify-content: flex-start;
+    position: relative;
+  }
+  .searchBarSort {
+    flex-direction: column;
+    display: flex;
+  }
+  .searchBarSort p,
+  .searchBarSort label {
+    font-size: var(--h5);
+    font-weight: var(--h4h5-weight);
+  }
+  .orderByNone {
+    display: flex;
+    margin-block: 10px;
+    justify-content: flex-end;
+    gap: 5px;
+  }
+  .orderBys,
+  .price {
+    width: 100%;
+  }
+  .cardTitle h5 {
+    font-size: 16px;
+  }
+  .cardTitle h4 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+}

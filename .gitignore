@@ -1,1 +1,87 @@
 settings.json
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/yeahfun-final-main/backend/node_modules
+/yeahfun-final-main/backend/.pnp
+/yeahfun-final-main/backend/.pnp.js
+/yeahfun-final-main/backend/.env
+
+# testing
+/yeahfun-final-main\backend/coverage
+
+# production
+/yeahfun-final-main/backend/build
+
+# misc
+/yeahfun-final-main/backend/.DS_Store
+/yeahfun-final-main/backend/.env.local
+/yeahfun-final-main/backend/.env.development.local
+/yeahfun-final-main/backend/.env.test.local
+/yeahfun-final-main/backend/.env.production.local
+# /sessions
+
+/yeahfun-final-main/backend/npm-debug.log*
+/yeahfun-final-main/backend/yarn-debug.log*
+/yeahfun-final-main/backend/yarn-error.log*
+/yeahfun-final-main/backend/.temp
+/yeahfun-final-main/backend/seeds-tmp
+
+/yeahfun-final-main/backend/package-lock.json
+/yeahfun-final-main/backend/yarn.lock
+/yeahfun-final-main/backend/data/json/faker-users.json
+/yeahfun-final-main/backend/testotp.js
+/yeahfun-final-main/backend/data/json/fake-product.json
+/yeahfun-final-main/backend/.env
+
+/yeahfun-final-main/backend/make-product-sample.js
+/yeahfun-final-main/backend/data/product-n2m.sql
+/yeahfun-final-main/backend/data/test_sql
+/yeahfun-final-main/backend//test-only
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/yeahfun-final-main/fontend/node_modules
+/yeahfun-final-main/fontend/.pnp
+/yeahfun-final-main/fontend/.pnp.js
+
+# testing
+/yeahfun-final-main/fontend/coverage
+
+# next.js
+/yeahfun-final-main/fontend/.next/
+/yeahfun-final-main/fontend/out/
+/yeahfun-final-main/fontend/dist/
+
+# production
+/yeahfun-final-main/fontend/build
+
+# misc
+/yeahfun-final-main/fontend/.DS_Store
+/yeahfun-final-main/fontend/*.pem
+
+# debug
+/yeahfun-final-main/fontend/npm-debug.log*
+/yeahfun-final-main/fontend/yarn-debug.log*
+/yeahfun-final-main/fontend/yarn-error.log*
+
+# local env files
+/yeahfun-final-main/fontend/.env*.local
+
+# vercel
+/yeahfun-final-main/fontend/.vercel
+
+# typescript
+/yeahfun-final-main/fontend/*.tsbuildinfo
+/yeahfun-final-main/fontend/next-env.d.ts
+
+# misc
+/yeahfun-final-main/fontend/package-lock.json
+/yeahfun-final-main/fontend/yarn.lock
+/yeahfun-final-main/fontend/.temp/
+/yeahfun-final-main/fontend/.html/
+/yeahfun-final-main/fontend/pages/only-test-dev/
+/yeahfun-final-main/fontend/localhost-key.pem
+/yeahfun-final-main/fontend/localhost.pem
+/yeahfun-final-main/fontend/pages/linepay-test/index-nouse.js

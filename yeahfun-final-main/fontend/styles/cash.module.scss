@@ -1,0 +1,70 @@
+.box {
+  background-color: var(--primary-1);
+  padding: 20px;
+  margin-bottom: 10px;
+  flex: 1;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.detailRight {
+  padding: 40px;
+  position: sticky;
+  top: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  top: 100px; /* 确保不会被顶部内容遮挡 */
+}
+
+.detailLeft {
+  margin-top: 0;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+  /* 增加阴影 */
+}
+
+.textColor {
+  color: #2f4f4f;
+}
+
+.detailLeft img {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.formLabel {
+  color: #2f4f4f;
+}
+
+.btnOutlineInfo {
+  background-color: #2f4f4f;
+  color: #fff;
+}
+
+.btnOutlineInfo:hover {
+  background-color: #3e8e41;
+  color: #fff;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.noPadding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (max-width: 990px) {
+  .detailLeft,
+  .detailRight {
+    margin-bottom: 20px;
+  }
+}

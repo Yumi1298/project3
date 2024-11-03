@@ -1,0 +1,64 @@
+.iconOpensuse {
+  transform: scaleX(-1);
+  color: var(--primary-1);
+  height: 40px;
+}
+
+.iconShoppingCart {
+  color: var(--white);
+}
+.iconShoppingCart:hover {
+  color: var(--secondary-3);
+}
+.DropdownToggle {
+  padding: 0px;
+  
+}
+.member{
+  color: var(--white);
+}
+.member:hover {
+  color: var(--secondary-3);
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  right: 0px;
+  left: auto;
+}
+
+.dropdown:hover .iconOpensuse,
+.dropdown:hover h5 {
+  color: var(--secondary-3);
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+// mobile disable animation
+@media only screen and (max-width: 992px) {
+  .slideIn {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .iconOpensuse {
+    display: none;
+  }
+  .iconShoppingCart {
+    display: none;
+  }
+}

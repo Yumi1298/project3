@@ -1,0 +1,426 @@
+// 檔案位置: styles/global.scss
+// 變數覆蓋用 (Variable overrides)
+// 全站配色 colors
+$primary: #023047;
+$secondary: rgba(41, 41, 40, 0.5);
+$success: #7eb4e6;
+$danger: #ff4136;
+
+// 按鈕圓角邊 button radius
+$border-radius: 0.2em;
+$border-radius-sm: 0.2em;
+$border-radius-lg: 0.2em;
+
+// 固定card高度
+// https://getbootstrap.com/docs/5.3/components/card/#grid-cards
+$card-height: 100%;
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 這裡導入所有 bootstrap 樣式
+// 最後營運階段(實務)可以用部份導入來進行最佳化
+// 參考: https://getbootstrap.com/docs/5.3/customize/sass/#importing
+@import '~bootstrap/scss/bootstrap';
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+
+// bs5內建圖示字體
+// 如果有使用其它圖示字體可以註解不使用
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+// google Noto Sans TC 字體
+// @import 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@500&display=swap';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Luckiest+Guy&family=Noto+Sans+TC:wght@100..900&display=swap');
+
+// fixed for __next root div
+#__next {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+body {
+  font-family: 'Noto Sans TC Regular', Helvetica, Arial, 'PingFang TC',
+    '苹方-繁', 'Heiti TC', '黑體-繁', 'Microsoft JhengHei', '微軟正黑體',
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    'Segoe UI',
+    // Android
+    Roboto,
+    // Basic web fallback
+    'Helvetica Neue',
+    Arial,
+    // Linux
+    'Noto Sans',
+    'Liberation Sans',
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji',
+    // title
+    'Luckiest Guy';
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.nav-link {
+  color: var(--black);
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--secondary-4);
+}
+.dropdown-menu {
+  z-index: 10;
+  width: 200px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+}
+.form-member {
+  max-width: 330px;
+  padding: 1rem;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote {
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
+}
+
+q {
+  &:before,
+  &:after {
+    content: '';
+    content: none;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// below is test only
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-1: #389b87;
+  --secondary-1: #929311;
+  --secondary-2: #c1c202;
+  --secondary-3: #fdaf17;
+  --secondary-4: #fffcf0;
+  --white: white;
+  --black: black;
+  --gray-800: #575757;
+  --gray-600: #757575;
+  --gray-400: #c4c4c4;
+  --gray-200: #f7f7f7;
+  --white: #ffffff;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Noto Sans TC Regular', sans-serif;
+  background-color: var(--secondary-4);
+  line-height: normal;
+}
+.transition {
+  transition: all 0.5s ease;
+}
+.btnGreenPc {
+  padding: 10px 30px;
+  border: 1px solid var(--white);
+  background: var(--primary-1);
+  color: var(--white);
+  /* font-size: var(--p); */
+  border: 1px solid var(--white);
+}
+
+.btnGreenPc:hover {
+  border: 1px solid var(--primary-1); /* 明確指定邊框寬度、樣式和顏色 */
+  background: var(--white);
+  color: var(--primary-1);
+}
+
+.btnOrangePc {
+  display: flex;
+  padding: 10px 30px;
+  background: linear-gradient(0deg, #fa8752 0%, #fdb524 100%);
+  color: var(--white);
+  /* font-size: var(--h5); */
+  border: var(--white);
+}
+.btnOrangePc:hover {
+  // background: linear-gradient(0deg, #fdb524 0%, #fa8752 100%);
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#feccb1+0,f17432+50,ea5507+51,fb955e+100;Red+Gloss+%232 */
+  background: linear-gradient(
+    to bottom,
+    #ffb58e 0%,
+    #fa8752 50%,
+    #ff8c00 51%,
+    #fb955e 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.btnWhitePc {
+  display: flex;
+  padding: 10px 30px;
+  background-color: var(--white);
+  color: var(--secondary-3);
+  border: var(--secondary-3);
+}
+.btnWhitePc:hover {
+  background-color: var(--secondary-3);
+  color: var(--white);
+  border: var(--white);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  // font-family: 'Luckiest Guy';
+  .titleContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .titleText {
+      color: var(--gray-800, #575757);
+      text-align: center;
+      font-family: 'Luckiest Guy';
+      font-size: 48px;
+      font-weight: 400;
+    }
+    p {
+      color: var(--gray-800, #575757);
+      text-align: center;
+      font-size: var(--p2);
+      font-weight: 400;
+      line-height: 20px;
+    }
+  }
+}
+.card {
+  --bs-card-bg: transparent;
+  --bs-card-border-color: transparent;
+}
+Link {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+
+.goTop {
+  position: fixed;
+  bottom: 70px;
+  right: 100px;
+  color: var(--secondary-3);
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 2;
+  border: none;
+}
+@media (max-width: 576px) {
+  .goTop {
+    bottom: 30px;
+    right: 30px;
+  }
+}
+
+.ql-editor {
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.5;
+}
+
+.ql-editor strong {
+  font-weight: bold;
+}
+
+.ql-editor em {
+  font-style: italic;
+}
+
+.ql-editor h1 {
+  font-size: 48px !important;
+  font-weight: 700 !important;
+}
+.ql-editor h2 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+.ql-editor h3 {
+  font-size: 28px !important;
+  font-weight: 700 !important;
+}
+.ql-editor h4 {
+  font-size: 24px !important;
+  font-weight: 600 !important;
+}
+.ql-editor h5 {
+  font-size: 20px !important;
+  font-weight: 600 !important;
+}
+.ql-editor h6 {
+  font-size: 18px !important;
+  font-weight: 500 !important;
+}
+
+.ql-editor a {
+  color: var(--secondary-3) !important;
+  font-weight: bold !important;
+}
+.ql-editor img {
+  max-width: 500px;
+  max-height: 350px;
+  display: block; /* 使图片独占一行 */
+  margin: 1rem 0;
+}

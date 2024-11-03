@@ -1,0 +1,42 @@
+[
+  {
+    "tag_id": 1,
+    "tag_name": "草皮"
+  },
+  {
+    "tag_id": 2,
+    "tag_name": "遠景"
+  },
+  {
+    "tag_id": 3,
+    "tag_name": "獨立包區"
+  },
+  {
+    "tag_id": 4,
+    "tag_name": "森林系"
+  },
+  {
+    "tag_id": 5,
+    "tag_name": "櫻花祭"
+  },
+  {
+    "tag_id": 6,
+    "tag_name": "親子同遊"
+  },
+  {
+    "tag_id": 7,
+    "tag_name": "雨棚"
+  },
+  {
+    "tag_id": 8,
+    "tag_name": "小木屋"
+  },
+  {
+    "tag_id": 9,
+    "tag_name": "山景雲海"
+  },
+  {
+    "tag_id": 10,
+    "tag_name": "海景"
+  }
+]
