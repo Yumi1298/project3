@@ -17,7 +17,7 @@
 
 - **HTML5、CSS3**：熟悉應用 HTML 標籤，能獨立切版，不依賴 Bootstrap 切出符合客戶需求的頁面。
 - **響應式網頁設計 (RWD)**：可手刻切版，也熟悉 Bootstrap，適用於手機、平板和桌電的頁面。
-- **JavaScript**：熟悉 ES6 語法。
+- **JavaScript**：了解 ES6 語法。
 - **AJAX**：能進行動態頁面渲染，進行非同步請求。
 - **後端基礎**：理解 PHP 和 Node 的運作，能取用與驗證資料，會基礎的 MySQL CRUD、JOIN 等語法，了解資料庫正規化。
 - **MongoDB 和 Mongosh**：理解 NoSQL 資料庫的概念，掌握基本的 CRUD 操作。使用 Mongosh 進行資料庫的操作，進行資料查詢、文件更新及刪除等基本資料庫操作
